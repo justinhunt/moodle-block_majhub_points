@@ -19,7 +19,7 @@ class block_majhub_points extends block_base
 
     public function applicable_formats()
     {
-        return array('course' => true, 'course-category' => false);
+        return array('site' => true, 'course' => true, 'course-category' => false);
     }
 
     public function instance_can_be_docked()
@@ -43,10 +43,6 @@ class block_majhub_points extends block_base
             return $this->content;
 
         if (empty($this->instance) || empty($USER->id))
-            return $this->content = '';
-
-        $courseware = majhub\courseware::from_courseid($this->page->course->id);
-        if (empty($courseware))
             return $this->content = '';
 
         $point = majhub\point::from_userid($USER->id);
