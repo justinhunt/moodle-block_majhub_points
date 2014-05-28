@@ -8,5 +8,6 @@ $string['totaluploads'] = 'Total Uploads';
 $string['totalreviews'] = 'Total Reviews';
 $string['popularitybonuses'] = 'Popularity Bonuses';
 $string['qualitybonuses'] = 'Quality Bonuses';
+$string['userbonuses'] = 'User Bonuses';
 $string['totaldownloads'] = 'Total Downloads';
 $string['total'] = 'Total';

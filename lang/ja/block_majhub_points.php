@@ -8,5 +8,6 @@ $string['totaluploads'] = 'アップロード';
 $string['totalreviews'] = 'レビュー';
 $string['popularitybonuses'] = '人気ボーナス';
 $string['qualitybonuses'] = '品質ボーナス';
+$string['userbonuses'] = 'ユーザーボーナス';
 $string['totaldownloads'] = 'ダウンロード';
 $string['total'] = '合計';

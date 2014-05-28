@@ -14,8 +14,9 @@ class block_majhub_points extends block_base
     public function init()
     {
         $this->title   = get_string('blocktitle', __CLASS__);
-        $this->version = 2013030101;
+        $this->version = 2014052600;
     }
+
 
     public function applicable_formats()
     {
@@ -48,14 +49,15 @@ class block_majhub_points extends block_base
         $point = majhub\point::from_userid($USER->id);
         $html = '
           <table class="points">
-            <tr><th rowspan="5" class="plus">' . $OUTPUT->pix_icon('plus', '', __CLASS__) . '</th>
+            <tr><th rowspan="6" class="plus">' . $OUTPUT->pix_icon('plus', '', __CLASS__) . '</th>
                 <th>' . get_string('registrationbonus', __CLASS__) . '</th><td>' . $point->registration . '</td></tr>
             <tr><th>' . get_string('totaluploads', __CLASS__) . '</th><td>' . $point->upload . '</td></tr>
             <tr><th>' . get_string('totalreviews', __CLASS__) . '</th><td>' . $point->review . '</td></tr>
             <tr><th>' . get_string('popularitybonuses', __CLASS__) . '</th><td>' . $point->popularity . '</td></tr>
             <tr><th>' . get_string('qualitybonuses', __CLASS__) . '</th><td>' . $point->quality . '</td></tr>
+            <tr><th>' . get_string('userbonuses', __CLASS__) . '</th><td>' . $point->user . '</td></tr>
             <tr><th rowspan="1" class="minus">' . $OUTPUT->pix_icon('minus', '', __CLASS__) . '</th>
-                <th>' . get_string('totaldownloads', __CLASS__) . '</th><td>' . $point->download . '</td></tr>
+            <th>' . get_string('totaldownloads', __CLASS__) . '</th><td>' . $point->download . '</td></tr>
             <tr class="total"><th></th>
                 <th>' . get_string('total', __CLASS__) . '</th><td>' . $point->total . '</td></tr>
           </table>';
